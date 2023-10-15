@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 focus.js
 DesignSystem.jsx
-Navbar.jsx
 Sidebar.jsx
