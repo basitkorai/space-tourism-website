@@ -1,11 +1,12 @@
 import Button from '../components/Button'
 
 const Home = () => {
-  const backgroundImages = 'bg-homemobile md:bg-hometablet lg:bg-homedesktop'
+  const backgroundImages =
+    'bg-homemobile md:bg-hometablet lg:bg-homedesktop bg-center bg-cover bg-no-repeat'
 
   return (
     <div
-      className={`container grid place-content-center px-4 ${backgroundImages}`}
+      className={`container grid place-content-center px-4 min-h-[100vh] ${backgroundImages}`}
     >
       <section>
         <div className="text-center mb-[5.02rem]">
