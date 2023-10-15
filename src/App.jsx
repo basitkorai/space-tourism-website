@@ -1,9 +1,12 @@
+import AppProvider from './context/context'
 import Home from './pages/Home'
 
 function App() {
   return (
     <>
-      <Home />
+      <AppProvider>
+        <Home />
+      </AppProvider>
     </>
   )
 }
