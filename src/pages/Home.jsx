@@ -9,7 +9,7 @@ const Home = () => {
     <div className={`${backgroundImages}`}>
       <Navbar />
       <Sidebar />
-      <div className={`container grid place-items-center min-h-screen px-4`}>
+      <div className={`container grid place-items-center px-4 py-6`}>
         <section>
           <div className="text-center mb-[5.06rem]">
             <h1 className="grid gap-4">
