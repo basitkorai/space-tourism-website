@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="pt-6 px-6 md:pt-0 md:pl-[2.4375rem] md:pr-0 mb-6 lg:pt-9 lg:pl-[3.4375rem] lg:text-base md:mb-[6.62rem]">
+      <div className="pt-6 px-6 md:pt-0 md:pl-[2.4375rem] md:pr-0 mb-6 lg:pt-9 lg:pl-[3.4375rem] lg:text-base md:mb-[6.62rem] lg:mb-[15.69rem]">
         <nav
           className="flex justify-between items-center "
           id="navbar"
@@ -53,7 +53,7 @@ const Navbar = () => {
             <li className="relative after:content-['']  after:absolute after:bg-white after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
               <a
                 tabIndex={isSidebarOpen ? 0 : -1}
-                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.38rem] block"
+                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
                 href="#"
               >
                 <span
@@ -68,7 +68,7 @@ const Navbar = () => {
             <li className="relative after:content-['']  after:absolute hover:after:bg-grey after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
               <a
                 tabIndex={isSidebarOpen ? 0 : -1}
-                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.38rem] block"
+                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
                 href="#"
               >
                 <span
@@ -83,7 +83,7 @@ const Navbar = () => {
             <li className="relative after:content-['']  after:absolute hover:after:bg-grey after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
               <a
                 tabIndex={isSidebarOpen ? 0 : -1}
-                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.38rem] block"
+                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
                 href="#"
               >
                 <span
@@ -98,7 +98,7 @@ const Navbar = () => {
             <li className="relative after:content-['']  after:absolute hover:after:bg-grey after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
               <a
                 tabIndex={isSidebarOpen ? 0 : -1}
-                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.38rem] block"
+                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
                 href="#"
               >
                 <span
