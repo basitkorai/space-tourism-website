@@ -2,8 +2,7 @@ import Button from '../components/Button'
 import Navbar from '../components/Navbar'
 
 const Home = () => {
-  const backgroundImages =
-    'bg-homemobile md:bg-hometablet lg:bg-homedesktop bg-bottom bg-cover bg-no-repeat'
+  const backgroundImages = 'bg-home bg-bottom bg-cover bg-no-repeat'
 
   return (
     <div className={`${backgroundImages}`}>

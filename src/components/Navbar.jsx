@@ -1,7 +1,7 @@
 import { useGlobalContext } from '../context/context'
 import { useEffect, useRef } from 'react'
-import iconHamburger from '../../public/assets/images/shared/icon-hamburger.svg'
-import logo from '../../public/assets/images/shared/logo.svg'
+import iconHamburger from '../assets/images/shared/icon-hamburger.svg'
+import logo from '../assets/images/shared/logo.svg'
 
 const Navbar = () => {
   const navToggle = useRef(null)

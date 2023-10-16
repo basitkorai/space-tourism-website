@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-home {
+  background-image: url('./images/home/background-home-mobile.jpg');
+}
+
+@media (min-width: 48em) {
+  .bg-home {
+    background-image: url('./images/home/background-home-tablet.jpg');
+  }
+}
+
+@media (min-width: 64em) {
+  .bg-home {
+    background-image: url('./images/home/background-home-desktop.jpg');
+  }
+}

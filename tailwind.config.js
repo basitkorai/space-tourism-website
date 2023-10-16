@@ -39,9 +39,9 @@ export default {
         spaceblur: '40.774227142333984px'
       },
       backgroundImage: {
-        homemobile: "url('./public/assets/images/home/background-home-mobile.jpg')",
-        hometablet: "url('./public/assets/images/home/background-home-tablet.jpg')",
-        homedesktop: "url('./public/assets/images/home/background-home-desktop.jpg')",
+        homemobile: "url('./src/assets/images/home/background-home-mobile.jpg')",
+        hometablet: "url('./src/assets/images/home/background-home-tablet.jpg')",
+        homedesktop: "url('./src/assets/images/home/background-home-desktop.jpg')",
       }
     },
   },
