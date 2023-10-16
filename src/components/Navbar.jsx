@@ -17,7 +17,7 @@ const Navbar = () => {
     <>
       <div className="pt-6 px-6 mb-6">
         <nav
-          className="nav navbar flex justify-between"
+          className="nav navbar flex justify-between items-center"
           id="navbar"
           aria-labelledby="primary-navigation"
         >
@@ -30,6 +30,7 @@ const Navbar = () => {
             onClick={() => {
               setIsSidebarOpen(true)
             }}
+            className="md:hidden"
             type="button"
             aria-expanded={isSidebarOpen}
             aria-controls="sidenav"
