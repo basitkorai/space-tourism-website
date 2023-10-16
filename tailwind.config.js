@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -41,18 +42,6 @@ export default {
         homemobile: "url('./src/assets/images/home/background-home-mobile.jpg')",
         hometablet: "url('./src/assets/images/home/background-home-tablet.jpg')",
         homedesktop: "url('./src/assets/images/home/background-home-desktop.jpg')",
-
-        destmobile: "url('./src/assets/images/destination/background-destination-mobile.jpg')",
-        desttablet: "url('./src/assets/images/destination/background-destination-tablet.jpg')",
-        destdesktop: "url('./src/assets/images/destination/background-destination-desktop.jpg')",
-
-        crewmobile: "url('./src/assets/images/crew/background-crew-mobile.jpg')",
-        crewtablet: "url('./src/assets/images/crew/background-crew-tablet.jpg')",
-        crewdesktop: "url('./src/assets/images/crew/background-crew-desktop.jpg')",
-
-        techmobile: "url('./src/assets/images/technology/background-technology-mobile.jpg')",
-        techtablet: "url('./src/assets/images/technology/background-technology-tablet.jpg')",
-        techdesktop: "url('./src/assets/images/technology/background-technology-desktop.jpg')",
       }
     },
   },
