@@ -31,7 +31,7 @@ const Navbar = () => {
             onClick={() => {
               setIsSidebarOpen(true)
             }}
-            className="md:hidden"
+            className="md:hidden rounded-full ring-white focus:ring-2 focus:p-2 focus:px-3 transition-all"
             type="button"
             aria-expanded={isSidebarOpen}
             aria-controls="sidenav"

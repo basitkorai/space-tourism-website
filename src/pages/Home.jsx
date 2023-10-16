@@ -11,7 +11,7 @@ const Home = () => {
       <Navbar />
       <Sidebar />
       <div
-        className={`container grid place-items-center lg:grid-cols-2 lg:justify-between px-4 py-6 lg:p-0 mx-auto`}
+        className={`container grid place-items-center lg:grid-cols-2 lg:justify-between px-4 tall:py-40 mx-auto`}
       >
         <div className="text-center lg:text-left mb-[5.06rem] md:mb-[9.75rem] lg:mb-0">
           <h1 className="grid gap-4 md:gap-6">

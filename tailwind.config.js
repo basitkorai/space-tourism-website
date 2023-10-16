@@ -38,6 +38,10 @@ export default {
       backdropBlur: {
         spaceblur: '40.774227142333984px'
       },
+      screens: {
+        'tall': { 'raw': '(max-height: 56.1875em) and (min-width: 48em)' }
+        // => @media (min-height: 900px) { ... }
+      }
     },
   },
   plugins: [],
