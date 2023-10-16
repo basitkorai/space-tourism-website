@@ -1,5 +1,6 @@
 import Button from '../components/Button'
 import Navbar from '../components/Navbar'
+import Sidebar from '../components/Sidebar'
 
 const Home = () => {
   const backgroundImages = 'bg-home bg-bottom bg-cover bg-no-repeat'
@@ -7,6 +8,7 @@ const Home = () => {
   return (
     <div className={`${backgroundImages}`}>
       <Navbar />
+      <Sidebar />
       <div className={`container grid place-items-center min-h-screen px-4`}>
         <section>
           <div className="text-center mb-[5.06rem]">
