@@ -85,7 +85,7 @@ const Navbar = () => {
               <Link
                 tabIndex={isSidebarOpen ? 0 : -1}
                 className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
-                to="#"
+                to="/crew"
               >
                 <span
                   aria-hidden="true"
@@ -100,7 +100,7 @@ const Navbar = () => {
               <Link
                 tabIndex={isSidebarOpen ? 0 : -1}
                 className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
-                to="#"
+                to="TECHNOLOGY"
               >
                 <span
                   aria-hidden="true"
