@@ -8,8 +8,10 @@ const Home = () => {
 
   return (
     <div className={`${backgroundImages}`}>
-      <Navbar />
-      <Sidebar />
+      <header>
+        <Navbar />
+        <Sidebar />
+      </header>
       <div
         className={`container grid place-items-center lg:grid-cols-2 lg:justify-between px-4 tall:pb-20 mx-auto`}
       >
