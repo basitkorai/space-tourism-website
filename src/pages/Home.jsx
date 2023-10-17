@@ -18,7 +18,7 @@ const Home = () => {
             <span className="font-sans_cond text-base text-accent leading-none md:text-xl lg:text-[1.75rem]">
               SO, YOU WANT TO TRAVEL TO
             </span>
-            <span className="text-[5rem] md:text-h1 block font-serif leading-none">
+            <span className="text-[5rem] md:text-h1 block font-serif lg:leading-none">
               SPACE
             </span>
           </h1>
@@ -29,7 +29,7 @@ const Home = () => {
             world experience!
           </p>
         </div>
-        <div className="grid place-content-center lg:self-end 2xl:mr-[10.125rem] lg:justify-self-end">
+        <div className="grid place-content-center mb-12 lg:mb-0 lg:self-end xl:mr-[10.125rem] lg:justify-self-end">
           <Button />
         </div>
       </div>
