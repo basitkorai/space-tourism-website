@@ -2,14 +2,12 @@ import Button from '../components/Button'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import AppProvider from '../context/context'
+import backgroundImages from '../utils/backgroundImages'
 
 const Home = () => {
-  const backgroundImages =
-    'bg-home bg-bottom bg-cover bg-no-repeat min-h-screen'
-
   return (
     <AppProvider>
-      <div className={`${backgroundImages}`}>
+      <div className={`bg-home ${backgroundImages}`}>
         <header>
           <Navbar />
           <Sidebar />

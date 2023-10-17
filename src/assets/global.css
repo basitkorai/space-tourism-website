@@ -8,14 +8,26 @@
   background-image: url('./images/home/background-home-mobile.jpg');
 }
 
+.bg-destination {
+  background-image: url('./images/destination/background-destination-mobile.jpg');
+}
+
 @media (min-width: 48em) {
   .bg-home {
     background-image: url('./images/home/background-home-tablet.jpg');
+  }
+
+  .bg-destination {
+    background-image: url('./images/destination/background-destination-tablet.jpg');
   }
 }
 
 @media (min-width: 64em) {
   .bg-home {
     background-image: url('./images/home/background-home-desktop.jpg');
+  }
+
+  .bg-destination {
+    background-image: url('./images/destination/background-destination-desktop.jpg');
   }
 }
