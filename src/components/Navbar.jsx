@@ -2,6 +2,7 @@ import { useGlobalContext } from '../context/context'
 import { useEffect, useRef } from 'react'
 import iconHamburger from '../assets/images/shared/icon-hamburger.svg'
 import logo from '../assets/images/shared/logo.svg'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const navToggle = useRef(null)
@@ -22,9 +23,9 @@ const Navbar = () => {
           aria-labelledby="primary-navigation"
         >
           <div className="logo">
-            <a href="./index.html">
+            <Link to="/">
               <img src={logo} alt="" width="40" height="40" />
-            </a>
+            </Link>
           </div>
           <div className="absolute z-50 hidden 2xl:flex ml-40 h-[0.0625rem] w-[29.5625rem] bg-grey"></div>
           <button
@@ -51,10 +52,10 @@ const Navbar = () => {
             id="nav-list"
           >
             <li className="relative after:content-['']  after:absolute after:bg-white after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
-              <a
+              <Link
                 tabIndex={isSidebarOpen ? 0 : -1}
                 className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
-                href="#"
+                to="/"
               >
                 <span
                   aria-hidden="true"
@@ -63,13 +64,13 @@ const Navbar = () => {
                   00
                 </span>
                 HOME
-              </a>
+              </Link>
             </li>
             <li className="relative after:content-['']  after:absolute hover:after:bg-grey after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
-              <a
+              <Link
                 tabIndex={isSidebarOpen ? 0 : -1}
                 className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
-                href="#"
+                to="/destination"
               >
                 <span
                   aria-hidden="true"
@@ -78,13 +79,13 @@ const Navbar = () => {
                   01
                 </span>
                 DESTINATION
-              </a>
+              </Link>
             </li>
             <li className="relative after:content-['']  after:absolute hover:after:bg-grey after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
-              <a
+              <Link
                 tabIndex={isSidebarOpen ? 0 : -1}
                 className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
-                href="#"
+                to="#"
               >
                 <span
                   aria-hidden="true"
@@ -93,13 +94,13 @@ const Navbar = () => {
                   02
                 </span>
                 CREW
-              </a>
+              </Link>
             </li>
             <li className="relative after:content-['']  after:absolute hover:after:bg-grey after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
-              <a
+              <Link
                 tabIndex={isSidebarOpen ? 0 : -1}
                 className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
-                href="#"
+                to="#"
               >
                 <span
                   aria-hidden="true"
@@ -108,7 +109,7 @@ const Navbar = () => {
                   03
                 </span>
                 TECHNOLOGY
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
