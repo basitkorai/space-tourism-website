@@ -1,6 +1,7 @@
 import { useGlobalContext } from '../context/context'
 import { useEffect, useRef } from 'react'
 import iconClose from '../assets/images/shared/icon-close.svg'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
   const closeSidebarBtn = useRef(null)
@@ -33,52 +34,52 @@ const Sidebar = () => {
           </button>
         </div>
         <li className="w-full relative after:content-['']  after:absolute after:bg-white after:h-full after:w-[0.25rem] after:right-0 after:top-0 mb-[1.56rem]">
-          <a
+          <Link
             tabIndex={isSidebarOpen ? 0 : -1}
             className="pt-[0.31rem] pb-[0.44rem] font-sans_cond  tracking-wider pl-8 block"
-            href="#"
+            to="/"
           >
             <span aria-hidden="true" className="font-bold mr-[0.69rem]">
               00
             </span>
             HOME
-          </a>
+          </Link>
         </li>
         <li className="w-full relative after:content-['']  after:absolute hover:after:bg-grey after:h-full after:w-[0.25rem] after:right-0 after:top-0 mb-[1.56rem]">
-          <a
+          <Link
             tabIndex={isSidebarOpen ? 0 : -1}
             className="pt-[0.31rem] pb-[0.44rem] font-sans_cond  tracking-wider pl-8 block"
-            href="#"
+            to="/destination"
           >
             <span aria-hidden="true" className="font-bold mr-[0.69rem]">
               01
             </span>
             DESTINATION
-          </a>
+          </Link>
         </li>
         <li className="w-full relative after:content-['']  after:absolute hover:after:bg-grey after:h-full after:w-[0.25rem] after:right-0 after:top-0 mb-[1.56rem]">
-          <a
+          <Link
             tabIndex={isSidebarOpen ? 0 : -1}
             className="pt-[0.31rem] pb-[0.44rem] font-sans_cond  tracking-wider pl-8 block"
-            href="#"
+            to="/crew"
           >
             <span aria-hidden="true" className="font-bold mr-[0.69rem]">
               02
             </span>
             CREW
-          </a>
+          </Link>
         </li>
         <li className="w-full relative after:content-['']  after:absolute hover:after:bg-grey after:h-full after:w-[0.25rem] after:right-0 after:top-0 mb-[1.56rem]">
-          <a
+          <Link
             tabIndex={isSidebarOpen ? 0 : -1}
             className="pt-[0.31rem] pb-[0.44rem] font-sans_cond  tracking-wider pl-8 block"
-            href="#"
+            to="/technology"
           >
             <span aria-hidden="true" className="font-bold mr-[0.69rem]">
               03
             </span>
             TECHNOLOGY
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
