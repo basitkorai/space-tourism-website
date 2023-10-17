@@ -12,12 +12,12 @@ const Sidebar = () => {
   }, [isSidebarOpen])
 
   return (
-    <nav className="md:hidden" role="navigation">
+    <nav className="md:hidden" role="navigation" id="">
       <ul
         className={`bg-navcolor backdrop-blur-spaceblur fixed top-0 right-0 ${
           isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
         } w-[70%] h-screen z-50 transition-transform`}
-        id="sidebar"
+        id="sidenav"
       >
         <div className="grid justify-end pt-[1.62rem] pb-[3.56rem] pr-[1.15rem] text-base">
           <button

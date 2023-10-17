@@ -26,7 +26,7 @@ const Navbar = () => {
               <img src={logo} alt="" width="40" height="40" />
             </a>
           </div>
-          <div className="absolute z-50 hidden lg:flex ml-40 h-[0.0625rem] w-[29.5625rem] bg-grey"></div>
+          <div className="absolute z-50 hidden 2xl:flex ml-40 h-[0.0625rem] w-[29.5625rem] bg-grey"></div>
           <button
             onClick={() => {
               setIsSidebarOpen(true)
