@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react'
 import iconHamburger from '../assets/images/shared/icon-hamburger.svg'
 import logo from '../assets/images/shared/logo.svg'
 import { Link } from 'react-router-dom'
+import { NavbarItem } from './NavListItem'
 
 const Navbar = () => {
   const navToggle = useRef(null)
@@ -51,66 +52,10 @@ const Navbar = () => {
             className="relative z-0 nav-list hidden md:flex bg-navcolor backdrop-blur-spaceblur min-w-[58.59%] w-[60%] max-w-[65%] gap-[2.31rem] justify-center text-[0.875rem] lg:text-base"
             id="nav-list"
           >
-            <li className="relative after:content-['']  after:absolute after:bg-white after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
-              <Link
-                tabIndex={isSidebarOpen ? 0 : -1}
-                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
-                to="/"
-              >
-                <span
-                  aria-hidden="true"
-                  className="hidden lg:inline font-bold mr-[0.69rem]"
-                >
-                  00
-                </span>
-                HOME
-              </Link>
-            </li>
-            <li className="relative after:content-['']  after:absolute hover:after:bg-grey after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
-              <Link
-                tabIndex={isSidebarOpen ? 0 : -1}
-                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
-                to="/destination"
-              >
-                <span
-                  aria-hidden="true"
-                  className="hidden lg:inline font-bold mr-[0.69rem]"
-                >
-                  01
-                </span>
-                DESTINATION
-              </Link>
-            </li>
-            <li className="relative after:content-['']  after:absolute hover:after:bg-grey after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
-              <Link
-                tabIndex={isSidebarOpen ? 0 : -1}
-                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
-                to="/crew"
-              >
-                <span
-                  aria-hidden="true"
-                  className="hidden lg:inline font-bold mr-[0.69rem]"
-                >
-                  02
-                </span>
-                CREW
-              </Link>
-            </li>
-            <li className="relative after:content-['']  after:absolute hover:after:bg-grey after:w-full after:h-[0.25rem] after:right-0 after:bottom-0">
-              <Link
-                tabIndex={isSidebarOpen ? 0 : -1}
-                className="font-sans_cond tracking-wider pt-[2.44rem] pb-[2.5rem] lg:pb-[2.19rem] block"
-                to="TECHNOLOGY"
-              >
-                <span
-                  aria-hidden="true"
-                  className="hidden lg:inline font-bold mr-[0.69rem]"
-                >
-                  03
-                </span>
-                TECHNOLOGY
-              </Link>
-            </li>
+            <NavbarItem page="HOME" ItemNum="00" route="/" />
+            <NavbarItem page="DESTINATION" ItemNum="01" route="/destination" />
+            <NavbarItem page="CREW" ItemNum="02" route="/crew" />
+            <NavbarItem page="TECHNOLOGY" ItemNum="03" route="/technology" />
           </ul>
         </nav>
       </div>
