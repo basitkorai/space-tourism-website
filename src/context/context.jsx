@@ -4,10 +4,13 @@ const AppContext = createContext()
 
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [tab, setTab] = useState(`moon`)
 
   const functions = {
     isSidebarOpen,
     setIsSidebarOpen,
+    tab,
+    setTab,
   }
 
   return (

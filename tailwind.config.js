@@ -31,7 +31,9 @@ export default {
         h4: '2rem',
         h5: '1.75rem',
         sh1: '1.75rem',
-        sh2: '0.875rem',
+        sh2: ['0.875rem', {
+          letterSpacing: "0.14763rem"
+        }],
         navtext: '1rem',
         body: '1.125rem',
       },
