@@ -2,6 +2,7 @@ import AppProvider from './context/context'
 import Home from './pages/Home'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Destination from './pages/Destination.jsx'
+import Crew from './pages/Crew'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: 'destination',
     element: <Destination />,
+  },
+  {
+    path: 'crew',
+    element: <Crew />,
   },
 ])
 
