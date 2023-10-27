@@ -27,7 +27,7 @@ const Destination = () => {
           <Navbar />
           <Sidebar />
         </header>
-        <div className="container grid lg:grid-cols-2 pt-6 text-center w-full mx-auto">
+        <div className="container grid lg:grid-cols-2 pt-6 md:pt-10 lg:pt-[4.75rem] text-center w-full mx-auto">
           <div>
             <p className="md:pl-[2.375rem] lg:pl-[3.47rem] text-base md:text-xl lg:text-[1.75rem] uppercase font-sans_cond tracking-[0.16875rem] text-center md:text-left mb-8 md:mb-[3.75rem] lg:mb-[6.0625rem]">
               <span className="font-bold opacity-25 mr-[1.12rem]">01</span>
