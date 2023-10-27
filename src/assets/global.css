@@ -14,6 +14,19 @@
   background: white;
 }
 
+.crew1 {
+  background-image: url('./images/crew/image-douglas-hurley.png');
+}
+.crew2 {
+  background-image: url('./images/crew/image-mark-shuttleworth.png');
+}
+.crew3 {
+  background-image: url('./images/crew/image-victor-glover.png');
+}
+.crew4 {
+  background-image: url('./images/crew/image-anousheh-ansari.png');
+}
+
 .bg-home {
   background-image: url('./images/home/background-home-mobile.jpg');
 }
