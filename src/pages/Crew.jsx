@@ -22,7 +22,7 @@ const Crew = () => {
           <Navbar />
           <Sidebar />
         </header>
-        <div className="container text-center lg:text-left mb-[5.06rem] md:mb-0 pt-6 lg:pt-[3.88rem] mx-auto">
+        <div className="container text-center lg:text-left mb-[5.06rem] md:mb-0 mt-6 md:mt-10 lg:mt-[4.75rem] mx-auto border border-transparent border-solid">
           <p className="lg:hidden md:pl-[2.375rem] lg:pl-[3.47rem] text-base md:text-xl lg:text-[1.75rem] uppercase font-sans_cond tracking-[0.16875rem] text-center md:text-left mb-8 md:mb-[3.75rem] lg:mb-[6.0625rem]">
             <span className="font-bold opacity-25 mr-[1.12rem]">02</span>
             Meet your crew
@@ -30,7 +30,7 @@ const Crew = () => {
           <div className="grid lg:grid-cols-2 place-content-center text-left">
             <div className="md:order-last">
               <div
-                className={`lg:w-[28.34rem] min-h-[33.25rem] max-h-[70rem] mx-auto mt-8 lg:mt-0 grid justify-items-center border-b border-navcolor md:border-transparent max-w-[20.4375rem] md:max-w-[27.75rem] lg:max-w-full xl:absolute bottom-0 right-[11.6875rem]  bg-no-repeat bg-bottom bg-contain ${
+                className={`lg:w-[28.34rem] min-h-[24rem] md:min-h-[33.25rem] lg:min-h-full mx-auto lg:mt-0 grid justify-items-center border-b border-navcolor md:border-transparent max-w-[20.4375rem] md:max-w-[27.75rem] lg:h-[105.2%] bg-no-repeat bg-bottom bg-contain ${
                   isCrew1
                     ? 'crew1'
                     : isCrew2
@@ -48,7 +48,7 @@ const Crew = () => {
               updateCrew={setCrew}
               currentCrew={name}
             />
-            <div className="md:order-first grid justify-center">
+            <div className="md:order-first grid justify-center lg:mb-[5.87]">
               <div>
                 <p className="hidden lg:block md:pl-[2.375rem] lg:pl-0 text-base md:text-xl lg:text-[1.75rem] uppercase font-sans_cond tracking-[0.16875rem] text-center lg:text-left mb-8 md:mb-[3.75rem] lg:mb-[9.63rem]">
                   <span className="font-bold opacity-25 mr-[1.12rem]">02</span>
@@ -63,7 +63,6 @@ const Crew = () => {
                 <p className="max-lg:mx-auto text-center lg:text-left text-[0.9375rem] md:text-base max-w-[20.4375rem] md:max-w-[27.75rem] leading-normal md:leading-7">
                   {bio}
                 </p>
-                {isCrew1 && <p></p>}
                 <RoundIndicators
                   hideOn={'hidden lg:flex'}
                   updateCrew={setCrew}
