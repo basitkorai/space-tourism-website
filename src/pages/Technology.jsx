@@ -32,7 +32,11 @@ const Technology = () => {
         <div className=" text-center lg:text-left pb-[3.52rem] lg:pb-0 mt-6 md:mt-10 lg:mt-[4.75rem] mx-auto lg:ml-auto border border-transparent border-solid">
           <div className="">
             <div className="lg:max-w-[79.6875rem] lg:grid lg:grid-cols-2 justify-center lg:justify-between lg:ml-auto">
-              <div className="lg:order-last grid justify-end pt-14">
+              <p className="lg:hidden md:pl-[2.375rem] lg:pl-[0rem] text-base md:text-xl lg:text-[1.75rem] uppercase font-sans_cond tracking-[0.16875rem] text-center md:text-left mb-8 md:mb-[3.75rem]">
+                <span className="font-bold opacity-25 mr-[1.12rem]">03</span>
+                Space launch 101
+              </p>
+              <div className="lg:order-last grid justify-end">
                 <picture className="">
                   <source
                     media="(min-width:1024px)"
@@ -62,7 +66,7 @@ const Technology = () => {
                 </picture>
               </div>
               <div className="px-6 lg:order-first ">
-                <p className="md:pl-[2.375rem] lg:pl-[0rem] text-base md:text-xl lg:text-[1.75rem] uppercase font-sans_cond tracking-[0.16875rem] text-center md:text-left mb-8 md:mb-[3.75rem] lg:mb-[8.56rem]">
+                <p className="hidden lg:block md:pl-[2.375rem] lg:pl-[0rem] text-base md:text-xl lg:text-[1.75rem] uppercase font-sans_cond tracking-[0.16875rem] text-center md:text-left mb-8 md:mb-[3.75rem] lg:mb-[8.56rem]">
                   <span className="font-bold opacity-25 mr-[1.12rem]">03</span>
                   Space launch 101
                 </p>
