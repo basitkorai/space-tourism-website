@@ -29,68 +29,62 @@ const Technology = () => {
           <Navbar />
           <Sidebar />
         </header>
-        <div className="container text-center lg:text-left pb-[3.52rem] lg:pb-0 mt-6 md:mt-10 lg:mt-[4.75rem] mx-auto border border-transparent border-solid">
-          <div>
-            <p className="md:pl-[2.375rem] lg:pl-[3.47rem] text-base md:text-xl lg:text-[1.75rem] uppercase font-sans_cond tracking-[0.16875rem] text-center md:text-left mb-8 md:mb-[3.75rem] lg:mb-[6.0625rem]">
-              <span className="font-bold opacity-25 mr-[1.12rem]">03</span>
-              Space launch 101
-            </p>
-            <div>
-              <picture>
-                <source
-                  media="(min-width:650px)"
-                  srcSet={
-                    one
-                      ? launchVehicleLandscape
-                      : two
-                      ? spaceportLandscape
-                      : three
-                      ? spaceCapsuleLandscape
-                      : spaceCapsuleLandscape
-                  }
-                />
-                <source
-                  media="(min-width:465px)"
-                  srcSet={
-                    one
-                      ? launchVehiclePortrait
-                      : two
-                      ? spaceportPortrait
-                      : three
-                      ? spaceCapsulePortrait
-                      : spaceCapsulePortrait
-                  }
-                />
-                <img
-                  src={
-                    one
-                      ? launchVehicleLandscape
-                      : two
-                      ? spaceportLandscape
-                      : three
-                      ? spaceCapsuleLandscape
-                      : spaceCapsuleLandscape
-                  }
-                  alt="Flowers"
-                />
-              </picture>
-              <NumberedIndicators currentTech={name} updateTech={setTech} />
-            </div>
-            <div className="px-6">
-              <p className="grid gap-2 lg:gap-[0.94rem] mb-4 md:mb-[1.75rem] lg:mb-[1.69rem] max-w-[20.4375rem] md:max-w-[27.75rem] lg:max-w-full pt-8 md:pt-0 mt-8 md:mt-0 mx-auto uppercase text-center lg:text-left font-sans_cond tracking-normal leading-none">
-                <span className="text-sh2 md:text-[1.5rem] opacity-50">
-                  The Terminology...
-                </span>
-                <span className="text-sh1 md:text-[2.5rem] font-serif">
-                  {name}
-                </span>
-              </p>
-              <p className="max-lg:mx-auto text-center lg:text-left text-[0.9375rem] md:text-base max-w-[20.4375rem] md:max-w-[27.75rem] leading-normal md:leading-7 mx-auto">
-                {description}
-              </p>
+        <div className=" text-center lg:text-left pb-[3.52rem] lg:pb-0 mt-6 md:mt-10 lg:mt-[4.75rem] mx-auto lg:ml-auto border border-transparent border-solid">
+          <div className="">
+            <div className="lg:max-w-[79.6875rem] lg:grid lg:grid-cols-2 justify-center lg:justify-between lg:ml-auto">
+              <div className="lg:order-last grid justify-end pt-14">
+                <picture className="">
+                  <source
+                    media="(min-width:1024px)"
+                    srcSet={
+                      one
+                        ? launchVehiclePortrait
+                        : two
+                        ? spaceportPortrait
+                        : three
+                        ? spaceCapsulePortrait
+                        : spaceCapsulePortrait
+                    }
+                  />
+                  <img
+                    className="w-screen lg:w-full max-h-[32.1875rem] mt-auto"
+                    src={
+                      one
+                        ? launchVehicleLandscape
+                        : two
+                        ? spaceportLandscape
+                        : three
+                        ? spaceCapsuleLandscape
+                        : spaceCapsuleLandscape
+                    }
+                    alt={name}
+                  />
+                </picture>
+              </div>
+              <div className="px-6 lg:order-first ">
+                <p className="md:pl-[2.375rem] lg:pl-[0rem] text-base md:text-xl lg:text-[1.75rem] uppercase font-sans_cond tracking-[0.16875rem] text-center md:text-left mb-8 md:mb-[3.75rem] lg:mb-[8.56rem]">
+                  <span className="font-bold opacity-25 mr-[1.12rem]">03</span>
+                  Space launch 101
+                </p>
+                <div className="lg:flex items-center gap-8">
+                  <NumberedIndicators currentTech={name} updateTech={setTech} />
+                  <div>
+                    <p className="grid gap-2 lg:gap-[0.94rem] mb-4 md:mb-[1.75rem] lg:mb-[1.69rem] max-w-[20.4375rem] md:max-w-[27.75rem] lg:max-w-full mt-8 md:mt-0 mx-auto uppercase text-center lg:text-left font-sans_cond tracking-normal leading-none">
+                      <span className="text-sh2 md:text-[1.5rem] opacity-50">
+                        The Terminology...
+                      </span>
+                      <span className="text-sh1 md:text-[2.5rem] font-serif">
+                        {name}
+                      </span>
+                    </p>
+                    <p className="max-lg:mx-auto text-center lg:text-left text-[0.9375rem] md:text-base max-w-[20.4375rem] md:max-w-[27.75rem] leading-normal md:leading-7 mx-auto">
+                      {description}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div></div>
         </div>
       </div>
     </AppProvider>
