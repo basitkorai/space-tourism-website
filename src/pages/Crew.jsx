@@ -30,7 +30,7 @@ const Crew = () => {
           <div className="grid lg:grid-cols-2 place-content-center text-left">
             <div className="md:order-last">
               <div
-                className={`lg:w-[28.34rem] min-h-[24rem] md:min-h-[33.25rem] lg:min-h-full mx-auto lg:mt-0 grid justify-items-center border-b border-navcolor md:border-transparent max-w-[20.4375rem] md:max-w-[27.75rem] lg:h-[110%] bg-no-repeat bg-bottom bg-contain ${
+                className={`lg:w-[28.34rem] min-h-[24rem] md:min-h-[33.25rem] lg:min-h-full scale-[1.17] mx-auto lg:mt-0 grid justify-items-center border-b border-navcolor md:border-transparent max-w-[20.4375rem] md:max-w-[27.75rem] lg:h-[110%] bg-no-repeat bg-bottom bg-contain ${
                   isCrew1
                     ? 'crew1'
                     : isCrew2
