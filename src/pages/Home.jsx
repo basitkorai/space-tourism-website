@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import AppProvider from '../context/context'
 import backgroundImages from '../utils/backgroundImages'
+import { motion } from 'framer-motion'
 
 const Home = () => {
   return (
@@ -15,7 +16,11 @@ const Home = () => {
         <div
           className={`container grid place-items-center lg:grid-cols-2 lg:justify-between px-4 tall:pb-20 mx-auto mt-6 md:mt-[6.62rem] lg:mt-[15.69rem]`}
         >
-          <div className="text-center lg:text-left mb-[5.06rem] md:mb-[9.75rem] lg:mb-0">
+          <motion.div
+            initial={{ x: -800, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            className="text-center lg:text-left mb-[5.06rem] md:mb-[9.75rem] lg:mb-0"
+          >
             <h1 className="grid gap-4 md:gap-6">
               <span className="font-sans_cond text-base text-accent leading-none md:text-xl lg:text-[1.75rem]">
                 SO, YOU WANT TO TRAVEL TO
@@ -30,10 +35,14 @@ const Home = () => {
               it. Well sit back, and relax because we’ll give you a truly out of
               this world experience!
             </p>
-          </div>
-          <div className="grid place-content-center mb-12 lg:mb-0 lg:self-end xl:mr-[10.125rem] lg:justify-self-end">
+          </motion.div>
+          <motion.div
+            initial={{ x: 800, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            className="grid place-content-center mb-12 lg:mb-0 lg:self-end xl:mr-[10.125rem] lg:justify-self-end"
+          >
             <Button />
-          </div>
+          </motion.div>
         </div>
       </div>
     </AppProvider>
