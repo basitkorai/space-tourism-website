@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import AppProvider, { useGlobalContext } from '../context/context'
@@ -8,12 +9,15 @@ import europa from '../assets/images/destination/image-europa.png'
 import titan from '../assets/images/destination/image-titan.png'
 import data from '../data/data.json'
 const destinations = data.destinations
+import { AnimatePresence, motion } from 'framer-motion'
+import DestinationImage from '../components/DestinationImage'
+import DestinationInfo from '../components/DestinationInfo'
 
 const Destination = () => {
-  const {
-    destination: { name, description, distance, travel },
-    setDestination,
-  } = useGlobalContext()
+  const [isVisible, setIsVisible] = useState(true)
+  const { destination, setDestination } = useGlobalContext()
+
+  const { name } = destination
 
   const isMoon = name === `Moon`
   const isMars = name === `Mars`
@@ -34,22 +38,32 @@ const Destination = () => {
               Pick your destination
             </p>
             <div className="max-w-[10.625rem] md:max-w-[18.75rem] lg:max-w-[27.8125rem] mx-auto mb-[1.625rem] md:mb-[3.3125rem] lg:grid justify-items-center">
-              <img
-                src={
-                  isMoon
-                    ? moon
-                    : isMars
-                    ? mars
-                    : isEuropa
-                    ? europa
-                    : isTitan
-                    ? titan
-                    : moon
-                }
-                alt=""
-                width="445"
-                height="445"
-              />
+              <AnimatePresence mode="popLayout">
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{
+                    ease: 'linear',
+                    repeat: Infinity,
+                    duration: 20,
+                    repeatType: 'loop',
+                  }}
+                >
+                  <DestinationImage
+                    image={
+                      isMoon
+                        ? moon
+                        : isMars
+                        ? mars
+                        : isEuropa
+                        ? europa
+                        : isTitan
+                        ? titan
+                        : null
+                    }
+                    visible={isVisible}
+                  />
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
           <div className="grid justify-center lg:justify-start  items-center text-center lg:text-left">
@@ -58,7 +72,11 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Moon' ? 'true' : 'false'}
                   onClick={() => {
-                    setDestination(destinations[0])
+                    setIsVisible(false)
+                    setTimeout(() => {
+                      setDestination(destinations[0])
+                      setIsVisible(true)
+                    }, 1100)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Moon'
@@ -71,7 +89,11 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Mars' ? 'true' : 'false'}
                   onClick={() => {
-                    setDestination(destinations[1])
+                    setIsVisible(false)
+                    setTimeout(() => {
+                      setDestination(destinations[1])
+                      setIsVisible(true)
+                    }, 1100)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Mars'
@@ -84,7 +106,11 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Europa' ? 'true' : 'false'}
                   onClick={() => {
-                    setDestination(destinations[2])
+                    setIsVisible(false)
+                    setTimeout(() => {
+                      setDestination(destinations[2])
+                      setIsVisible(true)
+                    }, 1100)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Europa'
@@ -97,7 +123,11 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Titan' ? 'true' : 'false'}
                   onClick={() => {
-                    setDestination(destinations[3])
+                    setIsVisible(false)
+                    setTimeout(() => {
+                      setDestination(destinations[3])
+                      setIsVisible(true)
+                    }, 1100)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Titan'
@@ -108,26 +138,7 @@ const Destination = () => {
                   Titan
                 </button>
               </div>
-              <h2 className="text-h3 md:text-[5rem] lg:text-[6.25rem] font-serif leading-none my-4 md:my-0 lg:mb-[0.88rem] uppercase">
-                {name}
-              </h2>
-              <p className="text-[0.9375rem] md:text-base max-w-[20.4375rem] md:max-w-[35.8125rem] text-accent leading-normal lg:leading-8 mx-auto">
-                {description}
-              </p>
-              <div className="grid lg:flex gap-8 lg:gap-[4.94rem] mb-[3.56rem] md:mb-[1.75rem] max-w-[20.4375rem] md:max-w-[27.75rem] lg:max-w-full pt-8 mt-8 md:mt-[3.02rem] lg:mt-[3.37rem] border-t-[0.0625rem] border-grey border-dash max-md:mx-auto uppercase">
-                <p className="flex flex-col">
-                  <span className="text-sh2 font-sans_cond text-accent">
-                    AVG. DISTANCE
-                  </span>
-                  <span className="text-sh1 font-serif">{distance}</span>
-                </p>
-                <p className="flex flex-col">
-                  <span className="text-sh2 font-sans_cond uppercase text-accent">
-                    Est. travel time
-                  </span>
-                  <span className="text-sh1 font-serif">{travel}</span>
-                </p>
-              </div>
+              <DestinationInfo visible={isVisible} info={{ ...destination }} />
             </div>
           </div>
         </div>
