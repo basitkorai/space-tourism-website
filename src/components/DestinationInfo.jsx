@@ -1,12 +1,15 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
-const DestinationInfo = ({ info: { name, description, distance, travel } }) => {
+const DestinationInfo = ({
+  info: { name, description, distance, travel },
+  visible,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ ease: 'linear', duration: 2 }}
+      animate={{ opacity: visible ? 1 : 0 }}
+      transition={{ ease: 'linear', duration: 1 }}
     >
       <h2 className="text-h3 md:text-[5rem] lg:text-[6.25rem] font-serif leading-none my-4 md:my-0 lg:mb-[0.88rem] uppercase">
         {name}

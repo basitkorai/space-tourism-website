@@ -1,10 +1,13 @@
+import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import AppProvider, { useGlobalContext } from '../context/context'
 import backgroundImages from '../utils/backgroundImages'
 import RoundIndicators from '../components/RoundIndicators'
+import { motion } from 'framer-motion'
 
 const Crew = () => {
+  const [isVisible, setIsVisible] = useState(true)
   const {
     crew: { name, role, bio },
     setCrew,
@@ -27,7 +30,12 @@ const Crew = () => {
             <span className="font-bold opacity-25 mr-[1.12rem]">02</span>
             Meet your crew
           </p>
-          <div className="grid lg:grid-cols-2 place-content-center text-left">
+          <motion.div
+            initial={{ opacity: 0.5 }}
+            animate={{ opacity: isVisible ? 1 : 0 }}
+            transition={{ ease: 'backOut', duration: 2 }}
+            className="grid lg:grid-cols-2 place-content-center text-left"
+          >
             <div className="md:order-last">
               <div
                 className={`lg:w-[28.34rem] min-h-[24rem] md:min-h-[33.25rem] lg:min-h-full lg:scale-[1.12] mx-auto lg:mt-0 grid justify-items-center border-b border-navcolor md:border-transparent max-w-[20.4375rem] md:max-w-[27.75rem] lg:h-[110%] bg-no-repeat bg-bottom bg-contain ${
@@ -47,6 +55,7 @@ const Crew = () => {
               hideOn={'lg:hidden'}
               updateCrew={setCrew}
               currentCrew={name}
+              setVisible={setIsVisible}
             />
             <div className="md:order-first grid justify-center lg:mb-[5.87]">
               <div>
@@ -67,10 +76,11 @@ const Crew = () => {
                   hideOn={'hidden lg:flex'}
                   updateCrew={setCrew}
                   currentCrew={name}
+                  setVisible={setIsVisible}
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </AppProvider>

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import AppProvider, { useGlobalContext } from '../context/context'
@@ -13,7 +14,9 @@ import DestinationImage from '../components/DestinationImage'
 import DestinationInfo from '../components/DestinationInfo'
 
 const Destination = () => {
+  const [isVisible, setIsVisible] = useState(true)
   const { destination, setDestination } = useGlobalContext()
+
   const { name } = destination
 
   const isMoon = name === `Moon`
@@ -45,15 +48,20 @@ const Destination = () => {
                     repeatType: 'loop',
                   }}
                 >
-                  {isMoon ? (
-                    <DestinationImage key={1} image={moon} />
-                  ) : isMars ? (
-                    <DestinationImage key={2} image={mars} />
-                  ) : isEuropa ? (
-                    <DestinationImage key={3} image={europa} />
-                  ) : isTitan ? (
-                    <DestinationImage key={4} image={titan} />
-                  ) : null}
+                  <DestinationImage
+                    image={
+                      isMoon
+                        ? moon
+                        : isMars
+                        ? mars
+                        : isEuropa
+                        ? europa
+                        : isTitan
+                        ? titan
+                        : null
+                    }
+                    visible={isVisible}
+                  />
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -64,7 +72,11 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Moon' ? 'true' : 'false'}
                   onClick={() => {
-                    setDestination(destinations[0])
+                    setIsVisible(false)
+                    setTimeout(() => {
+                      setDestination(destinations[0])
+                      setIsVisible(true)
+                    }, 1100)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Moon'
@@ -77,7 +89,11 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Mars' ? 'true' : 'false'}
                   onClick={() => {
-                    setDestination(destinations[1])
+                    setIsVisible(false)
+                    setTimeout(() => {
+                      setDestination(destinations[1])
+                      setIsVisible(true)
+                    }, 1100)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Mars'
@@ -90,7 +106,11 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Europa' ? 'true' : 'false'}
                   onClick={() => {
-                    setDestination(destinations[2])
+                    setIsVisible(false)
+                    setTimeout(() => {
+                      setDestination(destinations[2])
+                      setIsVisible(true)
+                    }, 1100)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Europa'
@@ -103,7 +123,11 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Titan' ? 'true' : 'false'}
                   onClick={() => {
-                    setDestination(destinations[3])
+                    setIsVisible(false)
+                    setTimeout(() => {
+                      setDestination(destinations[3])
+                      setIsVisible(true)
+                    }, 1100)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Titan'
@@ -114,7 +138,7 @@ const Destination = () => {
                   Titan
                 </button>
               </div>
-              <DestinationInfo info={{ ...destination }} />
+              <DestinationInfo visible={isVisible} info={{ ...destination }} />
             </div>
           </div>
         </div>

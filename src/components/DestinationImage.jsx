@@ -1,17 +1,18 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
-const DestinationImage = ({ image }) => {
+const DestinationImage = ({ image, visible }) => {
   return (
-    <motion.img
-      initial={{ opacity: 0.5 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0.25 }}
-      transition={{ ease: 'backOut', duration: 2 }}
-      src={image}
-      alt=""
-      width="445"
-      height="445"
-    />
+    <AnimatePresence>
+      <motion.img
+        initial={{ opacity: 0.5 }}
+        animate={{ opacity: visible ? 1 : 0 }}
+        transition={{ ease: 'backOut', duration: 2 }}
+        src={image}
+        alt=""
+        width="445"
+        height="445"
+      />
+    </AnimatePresence>
   )
 }
 

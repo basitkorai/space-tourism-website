@@ -2,7 +2,7 @@ import { useGlobalContext } from '../context/context'
 import data from '../data/data.json'
 const team = data.crew
 
-const RoundIndicators = ({ hideOn, currentCrew, updateCrew }) => {
+const RoundIndicators = ({ hideOn, currentCrew, updateCrew, setVisible }) => {
   const isCrew1 = currentCrew === `Douglas Hurley`
   const isCrew2 = currentCrew === `Mark Shuttleworth`
   const isCrew3 = currentCrew === `Victor Glover`
@@ -14,7 +14,11 @@ const RoundIndicators = ({ hideOn, currentCrew, updateCrew }) => {
     >
       <button
         onClick={() => {
-          updateCrew(team[0])
+          setVisible(false)
+          setTimeout(() => {
+            updateCrew(team[0])
+            setVisible(true)
+          }, 1100)
         }}
         aria-selected={isCrew1}
         className={`pb-4 ${
@@ -23,7 +27,11 @@ const RoundIndicators = ({ hideOn, currentCrew, updateCrew }) => {
       ></button>
       <button
         onClick={() => {
-          updateCrew(team[1])
+          setVisible(false)
+          setTimeout(() => {
+            updateCrew(team[1])
+            setVisible(true)
+          }, 1100)
         }}
         aria-selected={isCrew2}
         className={`pb-4 ${
@@ -32,7 +40,11 @@ const RoundIndicators = ({ hideOn, currentCrew, updateCrew }) => {
       ></button>
       <button
         onClick={() => {
-          updateCrew(team[2])
+          setVisible(false)
+          setTimeout(() => {
+            updateCrew(team[2])
+            setVisible(true)
+          }, 1100)
         }}
         aria-selected={isCrew3}
         className={`pb-4 ${
@@ -41,7 +53,11 @@ const RoundIndicators = ({ hideOn, currentCrew, updateCrew }) => {
       ></button>
       <button
         onClick={() => {
-          updateCrew(team[3])
+          setVisible(false)
+          setTimeout(() => {
+            updateCrew(team[3])
+            setVisible(true)
+          }, 1100)
         }}
         aria-selected={isCrew4}
         className={`pb-4 ${
