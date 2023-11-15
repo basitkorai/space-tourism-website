@@ -94,6 +94,7 @@ const Technology = () => {
                   />
                   <div>
                     <motion.div
+                      layout
                       initial={{ opacity: 0 }}
                       animate={{ opacity: isVisible ? 1 : 0 }}
                       transition={{ ease: 'backOut', duration: 2 }}
