@@ -82,7 +82,7 @@ const Destination = () => {
                   onClick={() => {
                     handleClick(0)
                   }}
-                  className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute after:h-1 after:w-full after:bottom-0 after:right-0 ${
+                  className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:transition-all after:duration-300 after:content-[''] after:absolute after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Moon'
                       ? 'after:bg-white'
                       : 'hover:after:bg-navcolor'
@@ -95,7 +95,7 @@ const Destination = () => {
                   onClick={() => {
                     handleClick(1)
                   }}
-                  className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
+                  className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:transition-all after:duration-300 after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Mars'
                       ? 'after:bg-white'
                       : 'hover:after:bg-navcolor'
@@ -108,7 +108,7 @@ const Destination = () => {
                   onClick={() => {
                     handleClick(2)
                   }}
-                  className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
+                  className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:transition-all after:duration-300 after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Europa'
                       ? 'after:bg-white'
                       : 'hover:after:bg-navcolor'
@@ -121,7 +121,7 @@ const Destination = () => {
                   onClick={() => {
                     handleClick(3)
                   }}
-                  className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
+                  className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:transition-all after:duration-300 after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Titan'
                       ? 'after:bg-white'
                       : 'hover:after:bg-navcolor'
