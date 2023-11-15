@@ -24,6 +24,14 @@ const Destination = () => {
   const isEuropa = name === `Europa`
   const isTitan = name === `Titan`
 
+  const handleClick = (index) => {
+    setIsVisible(false)
+    setTimeout(() => {
+      setDestination(destinations[index])
+      setIsVisible(true)
+    }, 1100)
+  }
+
   return (
     <AppProvider>
       <div className={`bg-destination ${backgroundImages}`}>
@@ -72,11 +80,7 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Moon' ? 'true' : 'false'}
                   onClick={() => {
-                    setIsVisible(false)
-                    setTimeout(() => {
-                      setDestination(destinations[0])
-                      setIsVisible(true)
-                    }, 1100)
+                    handleClick(0)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Moon'
@@ -89,11 +93,7 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Mars' ? 'true' : 'false'}
                   onClick={() => {
-                    setIsVisible(false)
-                    setTimeout(() => {
-                      setDestination(destinations[1])
-                      setIsVisible(true)
-                    }, 1100)
+                    handleClick(1)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Mars'
@@ -106,11 +106,7 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Europa' ? 'true' : 'false'}
                   onClick={() => {
-                    setIsVisible(false)
-                    setTimeout(() => {
-                      setDestination(destinations[2])
-                      setIsVisible(true)
-                    }, 1100)
+                    handleClick(2)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Europa'
@@ -123,11 +119,7 @@ const Destination = () => {
                 <button
                   aria-selected={name === 'Titan' ? 'true' : 'false'}
                   onClick={() => {
-                    setIsVisible(false)
-                    setTimeout(() => {
-                      setDestination(destinations[3])
-                      setIsVisible(true)
-                    }, 1100)
+                    handleClick(3)
                   }}
                   className={`pb-3 uppercase font-sans_cond text-accent bg-dark tracking-[0.16875rem] relative after:content-[''] after:absolute  after:h-1 after:w-full after:bottom-0 after:right-0 ${
                     name === 'Titan'
