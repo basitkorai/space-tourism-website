@@ -30,7 +30,10 @@ const Crew = () => {
             <span className="font-bold opacity-25 mr-[1.12rem]">02</span>
             Meet your crew
           </p>
-          <div className="grid lg:grid-cols-2 place-content-center text-left">
+          <motion.div
+            layout
+            className="grid lg:grid-cols-2 place-content-center text-left"
+          >
             <div className="md:order-last">
               <motion.div
                 initial={{ opacity: 0 }}
@@ -86,7 +89,7 @@ const Crew = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </AppProvider>
