@@ -75,7 +75,7 @@ const Destination = () => {
             </div>
           </div>
           <div className="grid justify-center lg:justify-start  items-center text-center lg:text-left">
-            <div className="max-w-[27.8125rem]">
+            <motion.div layout className="max-w-[27.8125rem]">
               <div className="tab-list flex justify-center lg:justify-start gap-[1.63rem] sm:gap-8 md:gap-[2.19rem] mb-5 md:mb-8 lg:mb-[2.31rem] items-center">
                 <button
                   aria-selected={name === 'Moon' ? 'true' : 'false'}
@@ -131,7 +131,7 @@ const Destination = () => {
                 </button>
               </div>
               <DestinationInfo visible={isVisible} info={{ ...destination }} />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
