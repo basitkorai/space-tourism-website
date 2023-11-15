@@ -30,14 +30,12 @@ const Crew = () => {
             <span className="font-bold opacity-25 mr-[1.12rem]">02</span>
             Meet your crew
           </p>
-          <motion.div
-            initial={{ opacity: 0.5 }}
-            animate={{ opacity: isVisible ? 1 : 0 }}
-            transition={{ ease: 'backOut', duration: 2 }}
-            className="grid lg:grid-cols-2 place-content-center text-left"
-          >
+          <div className="grid lg:grid-cols-2 place-content-center text-left">
             <div className="md:order-last">
-              <div
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isVisible ? 1 : 0 }}
+                transition={{ ease: 'backOut', duration: 2 }}
                 className={`lg:w-[28.34rem] min-h-[24rem] md:min-h-[33.25rem] lg:min-h-full lg:scale-[1.12] mx-auto lg:mt-0 grid justify-items-center border-b border-navcolor md:border-transparent max-w-[20.4375rem] md:max-w-[27.75rem] lg:h-[110%] bg-no-repeat bg-bottom bg-contain ${
                   isCrew1
                     ? 'crew1'
@@ -49,13 +47,14 @@ const Crew = () => {
                     ? 'crew4'
                     : 'crew1'
                 }`}
-              ></div>
+              ></motion.div>
             </div>
             <RoundIndicators
+              isVisible={isVisible}
+              setVisible={setIsVisible}
               hideOn={'lg:hidden'}
               updateCrew={setCrew}
               currentCrew={name}
-              setVisible={setIsVisible}
             />
             <div className="md:order-first grid justify-center lg:mb-[5.87]">
               <div>
@@ -63,24 +62,31 @@ const Crew = () => {
                   <span className="font-bold opacity-25 mr-[1.12rem]">02</span>
                   Meet your crew
                 </p>
-                <p className="grid gap-2 lg:gap-[0.94rem] mb-4 md:mb-[1.75rem] lg:mb-[1.69rem] max-w-[20.4375rem] md:max-w-[27.75rem] lg:max-w-full pt-8 md:pt-0 mt-8 md:mt-0 mx-auto uppercase text-center lg:text-left font-serif tracking-normal leading-none">
-                  <span className="text-sh2 md:text-[1.5rem] opacity-50">
-                    {role}
-                  </span>
-                  <span className="text-sh1 md:text-[2.5rem]">{name}</span>
-                </p>
-                <p className="max-lg:mx-auto text-center lg:text-left text-[0.9375rem] md:text-base max-w-[20.4375rem] md:max-w-[27.75rem] leading-normal md:leading-7">
-                  {bio}
-                </p>
+                <motion.div
+                  initial={{ opacity: 0.5 }}
+                  animate={{ opacity: isVisible ? 1 : 0 }}
+                  transition={{ ease: 'backOut', duration: 2 }}
+                >
+                  <p className="grid gap-2 lg:gap-[0.94rem] mb-4 md:mb-[1.75rem] lg:mb-[1.69rem] max-w-[20.4375rem] md:max-w-[27.75rem] lg:max-w-full pt-8 md:pt-0 mt-8 md:mt-0 mx-auto uppercase text-center lg:text-left font-serif tracking-normal leading-none">
+                    <span className="text-sh2 md:text-[1.5rem] opacity-50">
+                      {role}
+                    </span>
+                    <span className="text-sh1 md:text-[2.5rem]">{name}</span>
+                  </p>
+                  <p className="max-lg:mx-auto text-center lg:text-left text-[0.9375rem] md:text-base max-w-[20.4375rem] md:max-w-[27.75rem] leading-normal md:leading-7">
+                    {bio}
+                  </p>
+                </motion.div>
                 <RoundIndicators
+                  isVisible={isVisible}
+                  setVisible={setIsVisible}
                   hideOn={'hidden lg:flex'}
                   updateCrew={setCrew}
                   currentCrew={name}
-                  setVisible={setIsVisible}
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </AppProvider>
