@@ -18,7 +18,7 @@ const NumberedIndicators = ({
           handleClick(0)
         }}
         aria-selected={one}
-        className={`p-[1.5em] max-h-5 max-w-[20px] md:max-w-[60px] md:max-h-[60px] lg:w-[80px] lg:h-[80px] text-base rounded-full font-serif grid place-content-center ${
+        className={`p-[1.5em] max-h-5 max-w-[20px] md:max-w-[60px] md:max-h-[60px] lg:w-[80px] lg:h-[80px] transition-all duration-300 text-base rounded-full font-serif grid place-content-center ${
           one
             ? 'bg-white text-space'
             : 'bg-space text-white border border-translucent hover:border-white'
@@ -31,7 +31,7 @@ const NumberedIndicators = ({
           handleClick(1)
         }}
         aria-selected={two}
-        className={`p-[1.5em] max-h-5 max-w-[20px] md:max-w-[60px] md:max-h-[60px] lg:w-[80px] lg:h-[80px] text-base rounded-full font-serif grid place-content-center ${
+        className={`p-[1.5em] max-h-5 max-w-[20px] md:max-w-[60px] md:max-h-[60px] lg:w-[80px] lg:h-[80px] transition-all duration-300 text-base rounded-full font-serif grid place-content-center ${
           two
             ? 'bg-white text-space'
             : 'bg-space text-white border border-translucent hover:border-white'
@@ -44,7 +44,7 @@ const NumberedIndicators = ({
           handleClick(2)
         }}
         aria-selected={three}
-        className={`p-[1.5em] max-h-5 max-w-[20px] md:max-w-[60px] md:max-h-[60px] lg:w-[80px] lg:h-[80px] text-base rounded-full font-serif grid place-content-center ${
+        className={`p-[1.5em] max-h-5 max-w-[20px] md:max-w-[60px] md:max-h-[60px] lg:w-[80px] lg:h-[80px] transition-all duration-300 text-base rounded-full font-serif grid place-content-center ${
           three
             ? 'bg-white text-space'
             : 'bg-space text-white border border-translucent hover:border-white'
