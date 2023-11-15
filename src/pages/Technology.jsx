@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import NumberedIndicators from '../components/NumberedIndicators'
@@ -14,6 +16,7 @@ import data from '../data/data.json'
 const technology = data.technology
 
 const Technology = () => {
+  const [isVisible, setIsVisible] = useState(true)
   const { tech, setTech } = useGlobalContext()
 
   const { name, description } = tech
@@ -21,6 +24,14 @@ const Technology = () => {
   const one = name === 'Launch vehicle'
   const two = name === 'Spaceport'
   const three = name === 'Space capsule'
+
+  const handleClick = (index) => {
+    setIsVisible(false)
+    setTimeout(() => {
+      setTech(technology[index])
+      setIsVisible(true)
+    }, 1100)
+  }
 
   return (
     <AppProvider>
@@ -36,8 +47,13 @@ const Technology = () => {
                 <span className="font-bold opacity-25 mr-[1.12rem]">03</span>
                 Space launch 101
               </p>
-              <div className="lg:order-last grid justify-end">
-                <picture className="">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isVisible ? 1 : 0 }}
+                transition={{ ease: 'backOut', duration: 2 }}
+                className="lg:order-last grid justify-end"
+              >
+                <picture>
                   <source
                     media="(min-width:1024px)"
                     srcSet={
@@ -64,26 +80,36 @@ const Technology = () => {
                     alt={name}
                   />
                 </picture>
-              </div>
+              </motion.div>
               <div className="px-6 lg:order-first ">
                 <p className="hidden lg:block md:pl-[2.375rem] lg:pl-[0rem] text-base md:text-xl lg:text-[1.75rem] uppercase font-sans_cond tracking-[0.16875rem] text-center md:text-left mb-8 md:mb-[3.75rem] lg:mb-[8.56rem]">
                   <span className="font-bold opacity-25 mr-[1.12rem]">03</span>
                   Space launch 101
                 </p>
                 <div className="lg:flex items-center gap-8">
-                  <NumberedIndicators currentTech={name} updateTech={setTech} />
+                  <NumberedIndicators
+                    handleClick={handleClick}
+                    currentTech={name}
+                    updateTech={setTech}
+                  />
                   <div>
-                    <p className="grid gap-2 lg:gap-[0.94rem] mb-4 md:mb-[1.75rem] lg:mb-[1.69rem] max-w-[20.4375rem] md:max-w-[27.75rem] lg:max-w-full mt-8 md:mt-0 mx-auto uppercase text-center lg:text-left font-sans_cond tracking-normal leading-none">
-                      <span className="text-sh2 md:text-[1.5rem] opacity-50">
-                        The Terminology...
-                      </span>
-                      <span className="text-sh1 md:text-[2.5rem] font-serif">
-                        {name}
-                      </span>
-                    </p>
-                    <p className="max-lg:mx-auto text-center lg:text-left text-[0.9375rem] md:text-base max-w-[20.4375rem] md:max-w-[27.75rem] leading-normal md:leading-7 mx-auto">
-                      {description}
-                    </p>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: isVisible ? 1 : 0 }}
+                      transition={{ ease: 'backOut', duration: 2 }}
+                    >
+                      <p className="grid gap-2 lg:gap-[0.94rem] mb-4 md:mb-[1.75rem] lg:mb-[1.69rem] max-w-[20.4375rem] md:max-w-[27.75rem] lg:max-w-full mt-8 md:mt-0 mx-auto uppercase text-center lg:text-left font-sans_cond tracking-normal leading-none">
+                        <span className="text-sh2 md:text-[1.5rem] opacity-50">
+                          The Terminology...
+                        </span>
+                        <span className="text-sh1 md:text-[2.5rem] font-serif">
+                          {name}
+                        </span>
+                      </p>
+                      <p className="max-lg:mx-auto text-center lg:text-left text-[0.9375rem] md:text-base max-w-[20.4375rem] md:max-w-[27.75rem] leading-normal md:leading-7 mx-auto">
+                        {description}
+                      </p>
+                    </motion.div>
                   </div>
                 </div>
               </div>
