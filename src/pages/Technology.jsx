@@ -26,6 +26,7 @@ const Technology = () => {
   const three = name === 'Space capsule'
 
   const handleClick = (index) => {
+    if (tech === technology[index]) return
     setIsVisible(false)
     setTimeout(() => {
       setTech(technology[index])

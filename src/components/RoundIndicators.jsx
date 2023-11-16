@@ -26,6 +26,8 @@ const RoundIndicators = ({
       >
         <button
           onClick={() => {
+            if (currentCrew === team[index]) return
+
             setVisible(false)
             setTimeout(() => {
               updateCrew(team[0])
