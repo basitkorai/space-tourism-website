@@ -25,6 +25,7 @@ const Destination = () => {
   const isTitan = name === `Titan`
 
   const handleClick = (index) => {
+    if (destination === destinations[index]) return
     setIsVisible(false)
     setTimeout(() => {
       setDestination(destinations[index])
