@@ -28,8 +28,7 @@ const Destination = () => {
     setIsVisible(false)
     setTimeout(() => {
       setDestination(destinations[index])
-      setIsVisible(true)
-    }, 1100)
+    }, 700)
   }
 
   return (
@@ -69,6 +68,7 @@ const Destination = () => {
                         : null
                     }
                     visible={isVisible}
+                    setIsVisible={setIsVisible}
                   />
                 </motion.div>
               </AnimatePresence>

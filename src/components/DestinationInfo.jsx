@@ -9,7 +9,7 @@ const DestinationInfo = ({
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: visible ? 1 : 0 }}
-      transition={{ ease: 'linear', duration: 1 }}
+      transition={{ ease: 'linear', duration: 0.7 }}
     >
       <h2 className="text-h3 md:text-[5rem] lg:text-[6.25rem] font-serif leading-none my-4 md:my-0 lg:mb-[0.88rem] uppercase">
         {name}
