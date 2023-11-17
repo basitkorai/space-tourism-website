@@ -1,38 +1,24 @@
 import AppProvider from './context/context'
 import Home from './pages/Home'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, Routes } from 'react-router-dom'
 import Destination from './pages/Destination.jsx'
 import Crew from './pages/Crew'
 import Technology from './pages/Technology'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />,
-  },
-  {
-    path: 'index.html',
-    element: <Home />,
-  },
-  {
-    path: 'destination',
-    element: <Destination />,
-  },
-  {
-    path: 'crew',
-    element: <Crew />,
-  },
-  {
-    path: 'technology',
-    element: <Technology />,
-  },
-])
+import { Route } from 'react-router-dom'
 
 function App() {
   return (
     <>
       <AppProvider>
-        <RouterProvider router={router} />
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />}></Route>
+            <Route path="destination" element={<Destination />}></Route>
+            <Route path="crew" element={<Crew />}></Route>
+            <Route path="technology" element={<Technology />}></Route>
+          </Route>
+          <Route path="index.html" element={<Home />}></Route>
+        </Routes>
       </AppProvider>
     </>
   )
