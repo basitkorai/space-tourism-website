@@ -1,4 +1,5 @@
 import Button from '../components/Button'
+import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import AppProvider from '../context/context'
@@ -9,10 +10,7 @@ const Home = () => {
   return (
     <AppProvider>
       <div className={`bg-home ${backgroundImages}`}>
-        <header>
-          <Navbar />
-          <Sidebar />
-        </header>
+        <Header />
         <div
           className={`container grid place-items-center lg:grid-cols-2 lg:justify-between px-4 tall:pb-20 mx-auto mt-6 md:mt-[6.62rem] lg:mt-[15.69rem]`}
         >

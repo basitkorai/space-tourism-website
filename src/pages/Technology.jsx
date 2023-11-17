@@ -12,6 +12,7 @@ import spaceportPortrait from '../assets/images/technology/image-spaceport-portr
 import spaceCapsuleLandscape from '../assets/images/technology/image-space-capsule-landscape.jpg'
 import spaceCapsulePortrait from '../assets/images/technology/image-space-capsule-portrait.jpg'
 import data from '../data/data.json'
+import Header from '../components/Header'
 
 const technology = data.technology
 
@@ -35,10 +36,7 @@ const Technology = () => {
   return (
     <AppProvider>
       <div className={`bg-technology ${backgroundImages}`}>
-        <header>
-          <Navbar />
-          <Sidebar />
-        </header>
+        <Header />
         <div className=" text-center lg:text-left pb-[3.52rem] lg:pb-0 mt-6 md:mt-10 lg:mt-[4.75rem] mx-auto lg:ml-auto border border-transparent border-solid">
           <div className="">
             <div className="lg:max-w-[88.54%] lg:grid lg:grid-cols-2 justify-center lg:justify-between lg:ml-auto">
