@@ -35,8 +35,7 @@ const Sidebar = () => {
             <div className="grid justify-end pt-[1.62rem] pb-[3.56rem] pr-[1.15rem] text-base">
               <button
                 ref={closeSidebarBtn}
-                tabIndex={isSidebarOpen ? 0 : -1}
-                className="btn-close xside py-2 px-[0.55rem] rounded-full"
+                className="btn-close py-2 px-[0.55rem] rounded-full"
                 onClick={() => {
                   setIsSidebarOpen(false)
                 }}
