@@ -1,6 +1,6 @@
 import AppProvider from './context/context'
 import Home from './pages/Home'
-import { createBrowserRouter, RouterProvider, Routes } from 'react-router-dom'
+import { Routes } from 'react-router-dom'
 import Destination from './pages/Destination.jsx'
 import Crew from './pages/Crew'
 import Technology from './pages/Technology'
