@@ -5,6 +5,7 @@ import Destination from './pages/Destination.jsx'
 import Crew from './pages/Crew'
 import Technology from './pages/Technology'
 import { Route } from 'react-router-dom'
+import NotFound from './pages/NotFound.jsx'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="technology" element={<Technology />}></Route>
           </Route>
           <Route path="index.html" element={<Home />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </AppProvider>
     </>
