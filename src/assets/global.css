@@ -42,6 +42,9 @@
 .bg-technology {
   background-image: url('./images/technology/background-technology-mobile.jpg');
 }
+.bg-not-found {
+  background-image: url('./images/not-found/not-found-mobile.jpg');
+}
 
 @media (min-width: 48em) {
   .active::before {
@@ -68,6 +71,10 @@
 
   .bg-technology {
     background-image: url('./images/technology/background-technology-tablet.jpg');
+  }
+
+  .bg-not-found {
+    background-image: url('./images/not-found/not-found.jpg');
   }
 }
 
