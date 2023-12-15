@@ -23,7 +23,7 @@ const Crew = () => {
     <AppProvider>
       <div className={`bg-crew ${backgroundImages}`}>
         <Header />
-        <div className="container text-center lg:text-left mb-[5.06rem] md:mb-0 mt-6 md:mt-10 lg:mt-[4.75rem] mx-auto border border-transparent border-solid">
+        <main className="container text-center lg:text-left mb-[5.06rem] px-4 md:mb-0 mt-6 md:mt-10 lg:mt-[4.75rem] mx-auto border border-transparent border-solid">
           <p className="lg:hidden md:pl-[2.375rem] lg:pl-[3.47rem] text-base md:text-xl lg:text-[1.75rem] uppercase font-sans_cond tracking-[0.16875rem] text-center md:text-left mb-8 md:mb-[3.75rem] lg:mb-[6.0625rem]">
             <span className="font-bold opacity-25 mr-[1.12rem]">02</span>
             Meet your crew
@@ -88,7 +88,7 @@ const Crew = () => {
               </div>
             </div>
           </motion.div>
-        </div>
+        </main>
       </div>
     </AppProvider>
   )
