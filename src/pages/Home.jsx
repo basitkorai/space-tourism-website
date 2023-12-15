@@ -9,9 +9,9 @@ import { motion } from 'framer-motion'
 const Home = () => {
   return (
     <AppProvider>
-      <div className={`bg-home ${backgroundImages}`}>
+      <div className={`bg-home ${backgroundImages} w-full`}>
         <Header />
-        <div
+        <main
           className={`container grid place-items-center lg:grid-cols-2 lg:justify-between px-4 tall:pb-20 mx-auto mt-6 md:mt-[6.62rem] lg:mt-[15.69rem]`}
         >
           <motion.div
@@ -23,7 +23,7 @@ const Home = () => {
               <span className="font-sans_cond text-base text-accent leading-none md:text-xl lg:text-[1.75rem]">
                 SO, YOU WANT TO TRAVEL TO
               </span>
-              <span className="text-[5rem] md:text-h1 block font-serif lg:leading-none">
+              <span className="block font-serif lg:leading-none text-[calc(30vw-0.5rem)] smallest:text-[5rem] lg:text-h1">
                 SPACE
               </span>
             </h1>
@@ -41,7 +41,7 @@ const Home = () => {
           >
             <Button />
           </motion.div>
-        </div>
+        </main>
       </div>
     </AppProvider>
   )

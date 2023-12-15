@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 
 export default {
   content: [
@@ -15,6 +17,12 @@ export default {
       wide: '0.14763rem',
       wider: '2.7px',
       widest: '0.29531rem'
+    },
+    screens: {
+      'smallest': '320px',
+      'tall': { 'raw': '(max-height: 56.1875em) and (min-width: 48em)' },
+      ...defaultTheme.screens,
+      // => @media (min-height: 900px) { ... }
     },
     extend: {
       colors: {
@@ -40,10 +48,7 @@ export default {
       backdropBlur: {
         spaceblur: '40.774227142333984px'
       },
-      screens: {
-        'tall': { 'raw': '(max-height: 56.1875em) and (min-width: 48em)' }
-        // => @media (min-height: 900px) { ... }
-      }
+
     },
   },
   plugins: [],
