@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { useGlobalContext } from '../context/context'
 import data from '../data/data.json'
 const team = data.crew
 
@@ -15,6 +14,15 @@ const RoundIndicators = ({
   const isCrew3 = currentCrew === `Victor Glover`
   const isCrew4 = currentCrew === `Anousheh Ansari`
 
+  const handleClick = (index) => {
+    if (currentCrew === team[index].name) return
+    setVisible(false)
+    setTimeout(() => {
+      updateCrew(team[index])
+      setVisible((prevState) => (prevState === false ? true : false))
+    }, 1100)
+  }
+
   return (
     <AnimatePresence>
       <motion.div
@@ -26,13 +34,7 @@ const RoundIndicators = ({
       >
         <button
           onClick={() => {
-            if (currentCrew === team[index]) return
-
-            setVisible(false)
-            setTimeout(() => {
-              updateCrew(team[0])
-              setVisible(true)
-            }, 1100)
+            handleClick(0)
           }}
           aria-selected={isCrew1}
           className={`pb-4 ${
@@ -41,11 +43,7 @@ const RoundIndicators = ({
         ></button>
         <button
           onClick={() => {
-            setVisible(false)
-            setTimeout(() => {
-              updateCrew(team[1])
-              setVisible(true)
-            }, 1100)
+            handleClick(1)
           }}
           aria-selected={isCrew2}
           className={`pb-4 ${
@@ -54,11 +52,7 @@ const RoundIndicators = ({
         ></button>
         <button
           onClick={() => {
-            setVisible(false)
-            setTimeout(() => {
-              updateCrew(team[2])
-              setVisible(true)
-            }, 1100)
+            handleClick(2)
           }}
           aria-selected={isCrew3}
           className={`pb-4 ${
@@ -67,11 +61,7 @@ const RoundIndicators = ({
         ></button>
         <button
           onClick={() => {
-            setVisible(false)
-            setTimeout(() => {
-              updateCrew(team[3])
-              setVisible(true)
-            }, 1100)
+            handleClick(3)
           }}
           aria-selected={isCrew4}
           className={`pb-4 ${
