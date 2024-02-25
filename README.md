@@ -48,7 +48,7 @@ Users should be able to:
 
 ### What I learned
 
-I learn to use react router for the first time.
+I learned to use react router for the first time.
 
 ```jsx
 <Routes>
