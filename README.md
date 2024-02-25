@@ -65,8 +65,8 @@ I learn to use react router for the first time.
 
 ### Continued development
 
-- [] (Replace React with Next.js)
-- [] (Improve accessibility)
+- [] Replace React with Next.js
+- [] Improve accessibility
 
 <!-- ### Useful resources -->
 
